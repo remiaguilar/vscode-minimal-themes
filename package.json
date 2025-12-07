@@ -1,0 +1,52 @@
+{
+  "name": "minimal-themes",
+  "displayName": "Minimal Themes",
+  "description": "Temas minimalistas con colores pasteles para VS Code",
+  "version": "1.0.0",
+  "publisher": "remiaguilar",
+  "author": {
+    "name": "Remi Aguilar",
+    "url": "https://remiaguilar.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remiaguilar/vs-notes"
+  },
+  "bugs": {
+    "url": "https://github.com/remiaguilar/vs-notes/issues"
+  },
+  "homepage": "https://github.com/remiaguilar/vs-notes#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "minimal",
+    "pastel",
+    "light",
+    "dark",
+    "color-theme",
+    "open-source"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Minimal White",
+        "uiTheme": "vs",
+        "path": "./themes/minimal-white-theme.json"
+      },
+      {
+        "label": "Minimal Black",
+        "uiTheme": "vs-dark",
+        "path": "./themes/minimal-black-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "(code --uninstall-extension remiaguilar.minimal-themes || true) && vsce package --allow-missing-repository --allow-star-activation --no-yarn && code --install-extension minimal-themes-1.0.0.vsix --force"
+  }
+}
